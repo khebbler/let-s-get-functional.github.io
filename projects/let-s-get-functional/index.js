@@ -110,9 +110,36 @@ var youngestCustomer = function(array) {
     return youngest.name;
 };
 
-var averageBalance;
+var averageBalance = function(array) {
+}
 
-var firstLetterCount;
+/*
+I: array, letter
+O: number
+*/
+
+var firstLetterCount = function(customers, letter) {
+    // Initialziing targetLetter & converting to loweracse
+    var targetLetter = letter.toLowerCase();
+
+    // Initializing count variable
+    var count = 0;
+
+    // Iterating through customers
+    for (var i = 0; i < customers.length; i++) {
+
+        // Initializing firstLetter and converting to lowercase
+        var firstLetter = customers[i].name.charAt(0).toLowerCase();
+
+        // Checking if firstLetter = targetLetter
+        if (firstLetter === targetLetter) {
+        // Incrementing count
+        count++;
+    }
+  }
+  // Returning count
+  return count; 
+}
 
 var friendFirstLetterCount;
 
