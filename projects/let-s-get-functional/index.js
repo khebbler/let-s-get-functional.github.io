@@ -141,9 +141,53 @@ var firstLetterCount = function(customers, letter) {
   return count; 
 }
 
-var friendFirstLetterCount;
+/*
+I: array, customer, letter
+O: number
+*/
+var friendFirstLetterCount = function(arrayOfCustomers, customerName, letter) {
+    // Initializing target & converting to lowercase
+    var target = letter.toLowerCase();
 
-var friendsCount;
+    // Initializing count variable
+    var count = 0;
+
+    // Iterating through arrayOfCustomers
+    for (var i = 0; i < arrayOfCustomers.length; i++) {
+        // Checking if customerName is in array
+        if (arrayOfCustomers[i].name === customerName) {
+            // Iterating through friends of customer
+            for (var j = 0; j < arrayOfCustomers[i].friends.length; j++) {
+
+            }
+        }
+    }
+}
+
+/*
+I: array, name
+O: array
+*/
+
+var friendsCount = function(arrayOfCustomers, name) {
+    // Initializing output array
+    var output = [];
+    // Iterating through array of customers
+    for (var i = 0; i < arrayOfCustomers.length; i++) {
+        // Iterating through customer's friends
+        for (var j = 0; j < arrayOfCustomers[i].friends.length; j++) {
+            // Checking if friends name = name
+            if (arrayOfCustomers[i].friends[j].name === name) {
+                // Pushing customer's name to output array
+                output.push(arrayOfCustomers[i].name);
+                break;
+            }
+        }
+    }
+    // Returning output
+    return output;
+}
+
 
 var topThreeTags;
 
