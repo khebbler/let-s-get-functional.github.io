@@ -191,7 +191,33 @@ var friendsCount = function(arrayOfCustomers, name) {
 
 var topThreeTags;
 
-var genderCount;
+var genderCount = function (array) {
+    // Initialzing summary object with keys valued at 0
+    const summary = {
+        male: 0,
+        female: 0,
+        'non-binary': 0
+      };
+      // Iteratring over array
+      for (let i = 0; i < array.length; i++) {
+        // Initializing person & assigning to array element
+        const person = array[i];
+        // if gender is male
+        } if (person.gender === 'male') {
+            // for every male add to summary
+            summary.male += 1;
+            // if gender is female
+            } else if (person.gender === 'female') {
+            // for every female add to summary
+            summary.female += 1;
+          // if gender is nonbinary
+        } else if (person.gender === 'non-binary') {
+          // for every nonbinary add to summary
+          summary['non-binary'] += 1;
+        };
+        // returning summary
+        return summary;
+}
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
